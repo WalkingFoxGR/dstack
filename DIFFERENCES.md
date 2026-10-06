@@ -1,20 +1,22 @@
 # dstack differences from pstack
 
-Updated 2026-09-10. This is the source-of-truth handoff for upstream alignment and project structure. The supported product scope lives in [the scope guide](docs/guide/06-supported-scope.md). dstack is under development, so compatible pre-release shape changes do not bump schema version 2.
+Updated 2026-10-06. This is the source-of-truth handoff for upstream alignment and project structure. The supported product scope lives in [the scope guide](docs/guide/06-supported-scope.md). dstack is under development, so compatible pre-release shape changes do not bump schema version 2.
 
 ## Upstream baseline
 
 - Local source: `/Users/kourgia/projects/plugins/pstack`
 - Upstream repository: <https://github.com/cursor/plugins/tree/main/pstack>
-- Recorded source commit: `71ed0d1076fec562c1b74ee353121a8d00f75382`
-- Recorded plugin version: `0.15.0`
-- Recorded inventory: 47 skills and 23 `poteto-mode` playbooks
+- Recorded source commit: `df581122cde17e6e27686b5a448bde23e4ad4318`
+- Recorded plugin version: `0.15.15`
+- Recorded inventory: 51 skills and 23 `poteto-mode` playbooks
 
 Recheck the local source revision before a future sync. Treat pstack and other plugin folders as immutable inputs.
 
 The 2026-09-09 retained-source refresh absorbed pstack `0.14.1` → `0.15.0` density and punctuation, the two new principle leaves, the TypeScript schemas-before-guards rule, PR-body briefing language, the removal of Critique mode from `how`, and Babysit stop conditions adapted for GitHub and GitLab. Dstack currently diverges on pstack's machine-checked multi-phase plan. Revisit that choice later. These 0.15.0 changes are still unported and remain deliberate follow-ups: Cursor sticky-mode metadata, hardcoded Fable 5.1 / Grok defaults, human-only invocation on Skill-tool callees (`how`, `why`, `unslop`, `typescript-best-practices`), the plugin logo, and `make-bot-ui`.
 
 The 2026-10-06 refresh absorbed the harness-neutral parts of pstack `70b2dc8` (0.15.3) and `b0b9c7a` (0.15.4): instructions Opus 5.5 follows without the text are cut from the principles, playbooks, `interrogate`, `reflect`, `tdd`, `unslop`, `technical-writing`, `blast-radius`, `figure-it-out`, and `show-me-your-work`. `swarm` briefs now name exact SHAs and the measurement method, and a result that omits them is rerun once and then recorded as a gap. `show-me-your-work/scripts/log.sh` writes its header only to an empty log and appends instead of truncating. The concrete model-slug changes in the same commits do not apply, and the `autopilot-full`, `autopilot-stack`, `shipping`, and `multi-phase-plan` hunks stay out with those playbooks' existing divergence.
+
+The same refresh then absorbed pstack `0.15.5` → `0.15.15`. New skills: `correct`, `benchmark-checklist`, and `principle-explain-the-number`, all explicit-only, plus `dstack-help`, a port of `poteto-help` that routes to dstack's own skills, playbooks, setup, and guide and drops Custom Modes, `/loop`, cloud agents, and the excluded playbooks. Retained-skill changes: `architect` screens candidates as an agent contributor would change them and gains the split-ownership, two-ways, importable-internals, and hand-synced-list red flags; `dstack-mode` adds the benchmark trigger, the Explain the Number principle, fresh subagents by default, and claims that carry their evidence or label; Perf issue uses the performance mantras and Hillclimb borrows their order; both vet numbers with `benchmark-checklist`; Opening a PR uses `##` headings and shorter sections; `show-me-your-work` marks each run with a `start` row and audits only its own rows, append-only; `typescript-best-practices` uses a schema-first Zod example; `technical-writing` drops its fetch-date source lines. Not absorbed: model-rule reading, defaults, and the `setup-pstack` budget ask, because profiles live in `~/.dstack/config.json`; the built-in PR tool rule; autopilot owner changes in Babysit and Opening a PR; operator pronoun fixes, which touch only excluded playbooks; the upstream guide refresh, whose prompting and recipe content ships in `dstack-help` references; and `make-bot-ui`, already excluded.
 
 ## Deliberate differences
 
@@ -26,6 +28,7 @@ dstack ports selected pstack material rather than pursuing source completeness. 
 
 - `poteto-mode` is `dstack-mode`.
 - `setup-pstack` is `setup-dstack`.
+- `poteto-help` is `dstack-help`.
 - No legacy aliases are shipped.
 
 ### Referenced external skills

@@ -20,6 +20,7 @@ All current standalone skills remain supported.
 ### Workflow and orchestration
 
 - `dstack-mode`
+- `dstack-help`
 - `setup-dstack`
 - `automate-me`
 - `figure-it-out`
@@ -29,6 +30,7 @@ All current standalone skills remain supported.
 - `show-me-your-work`
 - `recall`
 - `reflect`
+- `correct`
 
 ### Understanding and design
 
@@ -46,6 +48,7 @@ All current standalone skills remain supported.
 - `create-verification-skill`
 - `maintain-verification-skill`
 - `tdd`
+- `benchmark-checklist`
 - `typescript-best-practices`
 
 ### Code and prose quality
@@ -63,6 +66,7 @@ All current standalone skills remain supported.
 - `principle-build-the-lever`
 - `principle-encode-lessons-in-structure`
 - `principle-exhaust-the-design-space`
+- `principle-explain-the-number`
 - `principle-experience-first`
 - `principle-fix-root-causes`
 - `principle-foundational-thinking`
