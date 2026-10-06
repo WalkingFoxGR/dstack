@@ -4,8 +4,6 @@
 
 Verification is the slowest step in most agent work, because it's the step that usually waits on a human. Make the agent able to do it, and you stop being the bottleneck. Skip it, and running more agents only gets you more unchecked work to review.
 
-![A prototype plane flies a real test course while she times it with a stopwatch and robots film and checklist the run; the terminal reads verify: pass, evidence: captured.](./images/verification.jpg)
-
 ## State the finish condition up front
 
 Put what done means in the first prompt, in whatever words fit:
@@ -121,4 +119,4 @@ Babysit stops at merge-ready. It never merges, even with everything green, becau
 
 Dstack stops at merge-ready. It does not ship the upstream Shipping playbook or automate merging. A request in the forge's merge queue or merge train with no remaining blockers counts as merge-ready.
 
-Next: [Keep an active run reviewable](./07-overnight.md).
+Next: [Steer with principle names](./08-principles.md).

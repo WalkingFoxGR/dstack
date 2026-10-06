@@ -2,8 +2,6 @@
 
 `/dstack-mode` is the front door. You give it a goal, it matches one of eighteen playbooks, copies that playbook's steps into the todo list, and calls the other skills as the steps need them. In this page you learn what a good prompt looks like, and how little of one you actually need.
 
-![A dispatcher pulls a switch lever to route robots on rail handcars toward lit gates, under a /dstack-mode departure board listing BUG FIX, FEATURE, and INVESTIGATION.](./images/router.jpg)
-
 ## What happens to your prompt
 
 ```mermaid
@@ -114,10 +112,10 @@ While the active local session can supervise the work, say what done means:
 /dstack-mode im stepping away. keep going until the migration check reports zero old callers. log your decisions.
 ```
 
-Work you'll review later routes through [`/figure-it-out`](../../../figure-it-out/SKILL.md), which designs the run's phases and keeps a [`/show-me-your-work`](../../../show-me-your-work/SKILL.md) decision log. [Keep an active run reviewable](./07-overnight.md) covers the contract and session boundary.
+Work you'll review later routes through [`/figure-it-out`](../../../figure-it-out/SKILL.md), which designs the run's phases and keeps a [`/show-me-your-work`](../../../show-me-your-work/SKILL.md) decision log. The [mode skill](../../../dstack-mode/SKILL.md#mode-lifetime) defines the active-session boundary, and [`/show-me-your-work`](../../../show-me-your-work/SKILL.md) explains how to audit the decision log.
 
 **Pitfall:** don't enumerate skills in your prompt ("use /how, then /architect, then /arena..."). The playbook already sequences them, and a hand-written sequence usually reorders or drops steps the playbook would have kept. Name a skill only when you want to override a specific choice.
 
 Read [`dstack-mode`](../../../dstack-mode/SKILL.md) itself for the full routing rules.
 
-Next: [Understand the code](./03-understand.md).
+Next: [Verify the result and open a PR](./06-verify-and-ship.md).

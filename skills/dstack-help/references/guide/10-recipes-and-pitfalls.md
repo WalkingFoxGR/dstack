@@ -2,8 +2,6 @@
 
 Prompts worth copying, then the mistakes everyone makes once. Swap in your own paths and finish conditions. The recipes are deliberately informal. That's how they get typed in practice, and the skills read intent fine.
 
-![She tastes a finished dish while robots cook from a recipe box, with pinned cards reading /how, /tdd, and /loop above the counter.](./images/recipes.jpg)
-
 ## Understand an unfamiliar subsystem
 
 ```text
@@ -106,7 +104,7 @@ You get an answer, a prompt to send, and a link to the source. Nothing runs unti
 im going to bed, keep going while this active session can supervise the work, until every fixture passes. do not stop. keep a decision log i can audit in the morning.
 ```
 
-The full contract is on the [active-session page](./07-overnight.md). The short form works once the task and finish condition are already in the conversation.
+The [mode skill](../../../dstack-mode/SKILL.md#mode-lifetime) defines the active-session boundary. The short form works once the task and finish condition are already in the conversation.
 
 ## Redirect a drifting run
 
@@ -153,4 +151,4 @@ That's the whole prompt. [`/bro`](../../../bro/SKILL.md) restates the last messa
 
 That's the guide. If you skipped ahead, go back to [setup](./01-setup.md) and run one real task. The habits stick from use, not from reading.
 
-Back to the [guide index](./README.md).
+Back to [Route work through `/dstack-mode`](./02-dstack-mode.md).
