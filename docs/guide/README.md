@@ -1,8 +1,9 @@
 # dstack guide
 
-1. [Install and configure](01-install-and-configure.md)
-2. [How dstack works](02-how-dstack-works.md)
-3. [dstack mode](03-dstack-mode.md)
-4. [Workflows](04-workflows.md)
-5. [Maintaining upstream alignment](05-maintaining-dstack.md)
-6. [Supported scope](06-supported-scope.md)
+Read the [complete user guide](../../skills/dstack-help/references/guide/README.md), bundled with `dstack-help`. It follows the upstream guide from setup through investigation, design, implementation, verification, long runs, principles, customization, and recipes.
+
+Repository-specific notes:
+
+- [How dstack works](02-how-dstack-works.md)
+- [Maintaining upstream alignment](05-maintaining-dstack.md)
+- [Supported scope](06-supported-scope.md)
