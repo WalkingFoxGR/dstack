@@ -14,6 +14,8 @@ Recheck the local source revision before a future sync. Treat pstack and other p
 
 The 2026-09-09 retained-source refresh absorbed pstack `0.14.1` → `0.15.0` density and punctuation, the two new principle leaves, the TypeScript schemas-before-guards rule, PR-body briefing language, the removal of Critique mode from `how`, and Babysit stop conditions adapted for GitHub and GitLab. Dstack currently diverges on pstack's machine-checked multi-phase plan. Revisit that choice later. These 0.15.0 changes are still unported and remain deliberate follow-ups: Cursor sticky-mode metadata, hardcoded Fable 5.1 / Grok defaults, human-only invocation on Skill-tool callees (`how`, `why`, `unslop`, `typescript-best-practices`), the plugin logo, and `make-bot-ui`.
 
+The 2026-10-06 refresh absorbed the harness-neutral parts of pstack `70b2dc8` (0.15.3) and `b0b9c7a` (0.15.4): instructions Opus 5.5 follows without the text are cut from the principles, playbooks, `interrogate`, `reflect`, `tdd`, `unslop`, `technical-writing`, `blast-radius`, `figure-it-out`, and `show-me-your-work`. `swarm` briefs now name exact SHAs and the measurement method, and a result that omits them is rerun once and then recorded as a gap. `show-me-your-work/scripts/log.sh` writes its header only to an empty log and appends instead of truncating. The concrete model-slug changes in the same commits do not apply, and the `autopilot-full`, `autopilot-stack`, `shipping`, and `multi-phase-plan` hunks stay out with those playbooks' existing divergence.
+
 ## Deliberate differences
 
 ### Curated scope
