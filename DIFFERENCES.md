@@ -77,7 +77,7 @@ Every independently invocable skill that consumes profiles or transcripts reads 
 
 Invocation has two portable states. Human-only root skills keep `disable-model-invocation: true`; `agents/openai.yaml` mirrors that policy with `allow_implicit_invocation: false`. Skills called through the Skill tool omit both restrictions because a model-disabled skill cannot be an internal callee in Claude Code or Codex. A human-only prerequisite is phrased as an instruction for the user to run the skill, not as a Skill-tool call. See [invocation metadata](docs/agents/invocation.md).
 
-The pstack refresh keeps `benchmark-checklist` callable because the mode and performance playbooks invoke it. Its call sites use the standard Skill-tool phrase. `dstack-help` directs task requests to explicit user invocation of `dstack-mode` and uses public URLs for guide pages, which the installer does not ship.
+The pstack refresh keeps `benchmark-checklist` callable because the mode and performance playbooks invoke it. Its call sites use the standard Skill-tool phrase. `dstack-help` directs task requests to explicit user invocation of `dstack-mode` and bundles its guide pages under `references/guide/`, which the existing installer copies with the skill. The matching `docs/guide/` pages link to these canonical references instead of duplicating them.
 
 The portability audit treats Skill-tool calls as invocation-graph edges and rejects any edge whose target is model-disabled. This preserves explicit-only roots without pretending either host supports a third state for internal-only invocation.
 
