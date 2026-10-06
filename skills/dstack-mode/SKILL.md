@@ -31,7 +31,7 @@ Remaining triggers:
 - Before commit → Call the Skill tool with `deslop`. Apply it to the diff.
 - Before review → Call the Skill tool with `no-comments`.
 - Shipping a CLI or TUI → Call the Skill tool with `control-cli`. Shipping a browser, IDE, or Electron UI → Call the Skill tool with `control-ui`. Drive the real thing rather than a proxy.
-- Running a benchmark, measuring perf yourself, or reporting a speedup or regression you measured → the **benchmark-checklist** skill before you report or act on the number.
+- Running a benchmark, measuring perf yourself, or reporting a speedup or regression you measured → Call the Skill tool with `benchmark-checklist`. Do so before you report or act on the number.
 - Any PR-status request → the **Babysit** playbook (`playbooks/babysit.md`), and not any similarly named host built-in whose description matches the same words. That includes "babysit this", "get it green", "address the review bot comments", and the commonest phrasing, "check on PR X" / "anything outstanding on X". Never triggered by merely opening a PR. Declare its mode before polling; the playbook's step 1 owns the request-to-mode mapping. Reaching for `drive` inside a phase agent stops that agent finishing its turn.
 - Automated review or the agentic security review commented → skeptical posture. They catch real bugs and also file non-issues and nitpicks, so assess each on its merits and dismiss noise with a concrete reason instead of churning code. Triage fix / dismiss / ask per `references/automated-review-triage.md`.
 - Broken skill mid-task → fix it locally as a separate change. Don't block. Don't silently work around it. Publish it only when the user explicitly asks to open a pull request or merge request.

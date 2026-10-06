@@ -2,7 +2,7 @@
 
 **You own the measurement story. Plan, review, verify the numbers.** Tie every fix to a measurement, don't read source instead of measuring.
 
-1. Capture a baseline trace via the matching control skill. Vet the baseline, and each later number, with the **benchmark-checklist** skill.
+1. Capture a baseline trace via the matching control skill. Call the Skill tool with `benchmark-checklist`. Vet the baseline and each later number.
 2. Call the Skill tool with `how`. Don't claim a perf ceiling without running it first.
    Try the performance mantras in order, cheapest first:
    1. Don't do it. Stop work whose result nothing uses rather than cheapening it.

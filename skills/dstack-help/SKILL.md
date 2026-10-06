@@ -8,9 +8,11 @@ disable-model-invocation: true
 
 Answer the user's question about dstack, hand them a prompt they can send, and link the file the answer came from. For a help question, don't start the work. The user asked how, and a dstack run spends real tokens, so let them send the prompt.
 
-A message that asks for work, such as "use dstack to fix this bug", is not a help question. Read [`dstack-mode`](../dstack-mode/SKILL.md) and do the work under it.
+A message that asks for work, such as "use dstack to fix this bug", is not a help question. Tell the user to invoke `dstack-mode` explicitly with that task.
 
 This file maps questions to the skills and guide pages that hold the answers. Those files own the details. Read the file you route to before you quote it, and trust it when it disagrees with this map. The links here point into the installed skills, which the user may not be able to open, so give the user the file's public copy: `https://github.com/dimitriskourg/dstack/blob/main/` followed by its path in the repository.
+
+Guide pages are linked by public URL because the installer does not ship them. Fetch a guide when the answer needs it. If it is unavailable, say so and answer from the installed skills.
 
 ## Find out what they need
 
@@ -31,7 +33,7 @@ When setup is missing and it matters, tell the user to run `setup-dstack` before
 
 ## Get set up
 
-1. Preview the install with `python3 install.py --dry-run`, then install. [Guide page 1](../../docs/guide/01-install-and-configure.md) has the exact command for each harness.
+1. Preview the install with `python3 install.py --dry-run`, then install. [Guide page 1](https://github.com/dimitriskourg/dstack/blob/main/docs/guide/01-install-and-configure.md) has the exact command for each harness.
 2. Run `setup-dstack`. It confirms a concrete model and effort for each of the four profiles (`fast-explorer`, `feature-worker`, `bug-worker`, `skeptical-reviewer`) and records this repository's transcript directory in `~/.dstack/config.json`.
 3. Start a real task with `/dstack-mode`, a goal, and a check that can pass or fail.
 
@@ -41,7 +43,7 @@ If cost is the worry, say where the tokens go and how to spend fewer. dstack spe
 
 ## Start a task with `/dstack-mode`
 
-`/dstack-mode` matches the task to a playbook, copies the playbook's steps into the todo list, and runs the other skills as the steps need them. A step it skips stays in the list as `skip: <reason>`. A good prompt states the goal and how to tell it's done. It doesn't list skills, because a hand-written sequence tends to drop or reorder steps the playbook would keep. Read [`references/prompting.md`](references/prompting.md) before you help word one. [Guide page 3](../../docs/guide/03-dstack-mode.md) explains the mode.
+`/dstack-mode` matches the task to a playbook, copies the playbook's steps into the todo list, and runs the other skills as the steps need them. A step it skips stays in the list as `skip: <reason>`. A good prompt states the goal and how to tell it's done. It doesn't list skills, because a hand-written sequence tends to drop or reorder steps the playbook would keep. Read [`references/prompting.md`](references/prompting.md) before you help word one. [Guide page 3](https://github.com/dimitriskourg/dstack/blob/main/docs/guide/03-dstack-mode.md) explains the mode.
 
 The mode lasts as long as the host keeps it in context. Read its Mode lifetime section before you answer how long it stays on. In a fresh session, after a compaction, or on a new task, start with `/dstack-mode` again. Mid-chat, "new task" makes the mode match a fresh playbook.
 
@@ -101,7 +103,7 @@ Playbooks are step lists inside `/dstack-mode`, not skills, so they have no slas
 - "pause safely" runs Pause safely.
 - "run the eval playbook" runs Eval.
 
-Without `/dstack-mode`, a phrase such as "babysit this pr" can start a host built-in for the same job instead. The Playbooks section of [`dstack-mode`](../dstack-mode/SKILL.md) lists every playbook and when it applies. [Guide page 4](../../docs/guide/04-workflows.md) covers the workflows, and [guide page 6](../../docs/guide/06-supported-scope.md) lists what dstack leaves out on purpose, such as autopilot, shipping, and worktree management.
+Without `/dstack-mode`, a phrase such as "babysit this pr" can start a host built-in for the same job instead. The Playbooks section of [`dstack-mode`](../dstack-mode/SKILL.md) lists every playbook and when it applies. [Guide page 4](https://github.com/dimitriskourg/dstack/blob/main/docs/guide/04-workflows.md) covers the workflows, and [guide page 6](https://github.com/dimitriskourg/dstack/blob/main/docs/guide/06-supported-scope.md) lists what dstack leaves out on purpose, such as autopilot, shipping, and worktree management.
 
 For work that spans phases or dependent PRs, asking `/dstack-mode` for a plan runs the [Multi-phase plan playbook](../dstack-mode/playbooks/multi-phase-plan.md), which writes the plan and doesn't implement it. For a design question, the Prototype playbook or `/architect` settles it in code first.
 
